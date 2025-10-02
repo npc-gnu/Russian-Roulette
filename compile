@@ -1,0 +1,3 @@
+#!/bin/bash
+g++ src/memory_leak.cpp src/rroulette.cpp src/sanimatel.cpp -Iinclude -o rroulette 
+sudo ./rroulette
