@@ -9,7 +9,8 @@ Anyways; this russian roulette,
 **BUT**
 - if you dont
 - Will going to make memory leaks
-**AND** 
+**AND**(ascii art only looks great on raw file)
+ 
                  .___                                          _____       /\                                                                                                                                  __   
   ________ __  __| _/____   _______  _____            ________/ ____\     / /                      ____   ____           _____________   ____   ______ ______________  __ ____           _______  ____   _____/  |_ 
  /  ___/  |  \/ __ |/  _ \  \_  __ \/     \    ______ \_  __ \   __\     / /     ______   ______  /    \ /  _ \   ______ \____ \_  __ \_/ __ \ /  ___// __ \_  __ \  \/ // __ \   ______ \_  __ \/  _ \ /  _ \   __\
@@ -20,7 +21,7 @@ Anyways; this russian roulette,
 
 ## Using
 ```Bash
-chmod +x compile && ./compile && ./rroulette
+chmod +x compile && ./compile
 ```
 I will add Makefile soon.
 
