@@ -23,7 +23,7 @@ Anyways; this russian roulette,
 ### If you have Make installed
 ```Bash
 make -j$(nproc) # For compiling
-make run # 
+make run # For running
 make clean # For cleaning .o files and rroulette.
 ```
 ### If you dont

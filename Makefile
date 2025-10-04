@@ -8,4 +8,4 @@ $(TARGET): $(OBJ)
 clean:
 	rm -f $(OBJ) $(TARGET)
 run:
-	sudo ./rroulette
+	sudo ./$(TARGET)
