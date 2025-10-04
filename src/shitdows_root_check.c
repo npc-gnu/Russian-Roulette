@@ -3,15 +3,19 @@
  * Root check code for worlds worst os (especially you 11, son of a bitch!), it is bad as shit,
  * AND you can even turn shit to a fertilizer, i dont know how can we make windows a useful thing.
  */
+#ifdef _WIN32
+#include "shitdowsfuncts.h"
 #include <windows.h>
-#include <stdio.h>
-BOOL shitdowsrootchech(){
+BOOL shitdowsrootcheck(void) {
     BOOL isMember = FALSE;
-    BYTE sidBuffer[SECURITY_MAX_SID_SIZE];
-    PSID administratorsSid = (PSID)&sidBuffer;
-    if(!CreateWellKnownSid(WinBuiltinAdministratorsSid, NULL, administratorsSid, &(DWORD){SECURITY_MAX_SID_SIZE})){
-        // This line is empty i guess. I vibe coded this file. It wont worth it for doing research about windows file.
-    }if (!CheckTokenMembership(NULL, administratorsSid, &isMember)) {
+    PSID administratorsSid = NULL;
+    SID_IDENTIFIER_AUTHORITY ntAuthority = SECURITY_NT_AUTHORITY;
+    if(!AllocateAndInitializeSid(&ntAuthority, 2, SECURITY_BUILTIN_DOMAIN_RID, DOMAIN_ALIAS_RID_ADMINS, 0,0,0,0,0,0, &administratorsSid)){
         return FALSE;
-    }return isMember;
+    }if (!CheckTokenMembership(NULL, administratorsSid, &isMember)) {
+            isMember = FALSE;
+        }if (administratorsSid)
+            FreeSid(administratorsSid);
+    return isMember;
 }
+#endif

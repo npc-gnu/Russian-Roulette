@@ -20,17 +20,23 @@ Anyways; this russian roulette,
 - So it will delete everything, will take all of your memory and fuck your computer.
 
 ## Using
+### If you have Make installed
 ```Bash
-chmod +x compile && ./compile
+make -j$(nproc) # For compiling
+make run # 
+make clean # For cleaning .o files and rroulette.
 ```
-I will add Makefile soon.
-
+### If you dont
+```
+chmod +x compile 
+./compile
+```
 ## Windows Support
 - 1st, it is not windows. You can call it
 - shitdows,(If i call it shit, this would be swear to shits but nevermind.)
 - dickdows,
 - /etc.
-I will make its support soon. Normally, because of my hate to windows; i dont develop software to there but this game can fuck dickdows, i will release it to there too.
+04.10.2025: It support windows now but i don't have any idea how to compile it on windows.
 
 ## LICENSE
 GNU is Not Unix Affero General Public License version 3(AGPLv3)
